@@ -2,43 +2,135 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <script type="text/javascript" src="/assets/eea112fd/jquery.min.js"></script>
   <title>网站名字</title>
   <!-- Add some style to your site, see http://getbootstrap.com for details -->
   <link rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <body>
+  
   <br /> <br />
   <h1><b>URL唤起APP：</b></h1>
   <br /> <br />
-  <h1><a href="komovie://app">启动App（18）</a></h1>
+  <a href="javascript:void(0)"  class="launch" id="launch" title="launch">启动App（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=ActivityDetail&extra1=97">展示型活动：extra1（18）</a></h1>
+  <a href="javascript:void(0)"  class="ActivityDetail1" id="ActivityDetail1" title="ActivityDetail1">展示型活动：extra1（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=ActivityDetail&extra1=97&extra2=1">展示型活动：extra1，extra2（类型）=1（18）</a></h1>
+  <a href="javascript:void(0)"  class="ActivityDetail2" id="ActivityDetail2" title="ActivityDetail2">展示型活动：extra1，extra2（类型）=1（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=ActivityDetail&extra1=90&extra2=2">抢票活动：extra1，extra2（类型）=2（18）</a></h1>
+  <a href="javascript:void(0)"  class="ActivityDetail3" id="ActivityDetail3" title="ActivityDetail3">抢票活动：extra1，extra2（类型）=2（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=ActivityDetail&extra1=91&extra2=3">抢码活动：extra1，extra2（类型）=3（18）</a></h1>
+  <a href="javascript:void(0)"  class="ActivityDetail4" id="ActivityDetail4" title="ActivityDetail4">抢码活动：extra1，extra2（类型）=3（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=MovieDetail&extra1=386121">影片详情：tab无（18）</a></h1>
+  <a href="javascript:void(0)"  class="MovieDetail1" id="MovieDetail1" title="MovieDetail1">影片详情：tab无（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=MovieDetail&extra1=386121&extra2=1">影片详情：extra2（tab）＝1（18）</a></h1>
+  <a href="javascript:void(0)"  class="MovieDetail2" id="MovieDetail2" title="MovieDetail2">影片详情：extra2（tab）＝1（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=MovieDetail&extra1=386121&extra2=2">影片详情：extra2（tab）＝2（18）</a></h1>
+  <a href="javascript:void(0)"  class="MovieDetail3" id="MovieDetail3" title="MovieDetail3">影片详情：extra2（tab）＝2（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=MovieDetail&extra1=386121&extra2=3">影片详情：extra2（tab）＝3（18）</a></h1>
+  <a href="javascript:void(0)"  class="MovieDetail4" id="MovieDetail4" title="MovieDetail4">影片详情：extra2（tab）＝3（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=CinemaDetail&extra1=60">影院详情：tab无，movie无（18）</a></h1>
+  <a href="javascript:void(0)"  class="CinemaDetail1" id="CinemaDetail1" title="CinemaDetail1">影院详情：tab无，movie无（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=CinemaDetail&extra1=60&extra2=2">影院详情：extra2（tab）＝2，movie无（18）</a></h1>
+  <a href="javascript:void(0)"  class="CinemaDetail2" id="CinemaDetail2" title="CinemaDetail2">影院详情：extra2（tab）＝2，movie无（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=CinemaDetail&extra1=60&extra3=386121">影院详情：tab无，extra3（movie）＝386121（18）</a></h1>
+  <a href="javascript:void(0)"  class="CinemaDetail3" id="CinemaDetail3" title="CinemaDetail3">影院详情：tab无，extra3（movie）＝386121（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=CinemaDetail&extra1=60&extra2=1&extra3=386121">影院详情：extra2（tab）＝1，extra3（movie）＝386121（18）</a></h1>
+  <a href="javascript:void(0)"  class="CinemaDetail4" id="CinemaDetail4" title="CinemaDetail4">影院详情：tab无，extra3（movie）＝386121（19）</a>
   <br /> <br /> <br /> <br />
-  <h1><a href="komovie://app/page?name=ChooseSeat&extra1=36200275">选座页面：（18）</a></h1>
+  <a href="javascript:void(0)"  class="ChooseSeat" id="ChooseSeat" title="ChooseSeat">选座页面（19）</a>
   <br /> <br /> <br /> <br />
   <br /> <br />
+  
+  <script> 
+    $(function(){
+      $(".launch").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app";
+	    });
+	    $(".ActivityDetail1").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=ActivityDetail&extra1=97";
+	    });
+	    $(".ActivityDetail2").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=ActivityDetail&extra1=97&extra2=1";
+	    });
+	    $(".ActivityDetail3").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=ActivityDetail&extra1=90&extra2=2";
+	    });
+	    $(".ActivityDetail4").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=ActivityDetail&extra1=91&extra2=3";
+	    });
+	    $(".MovieDetail1").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=MovieDetail&extra1=386121";
+	    });
+	    $(".MovieDetail2").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=MovieDetail&extra1=386121";
+	    });
+      $(".MovieDetail3").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=MovieDetail&extra1=386121&extra2=2";
+	    });
+      $(".MovieDetail4").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=MovieDetail&extra1=386121&extra2=3";
+	    });
+      $(".CinemaDetail1").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=CinemaDetail&extra1=60";
+	    });
+      $(".CinemaDetail2").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=CinemaDetail&extra1=60&extra2=2";
+	    });
+      $(".CinemaDetail3").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=CinemaDetail&extra1=60&extra3=386121";
+	    });
+      $(".CinemaDetail4").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=CinemaDetail&extra1=60&extra2=1&extra3=386121";
+	    });
+      $(".ChooseSeat").click( function (){
+        setTimeout(function(){
+          location='http://m.komovie.cn/download';
+        },25);
+        location = "komovie://app/page?name=ChooseSeat&extra1=36200275";
+	    });
+    })
+  </script>
+
 </body>
 </html>
