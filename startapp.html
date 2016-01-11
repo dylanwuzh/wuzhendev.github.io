@@ -67,11 +67,8 @@
         var isApp = (navigator.userAgent.match(re) != null);
 
         $(".launch").click(function() {
-            if (isApp) {
+            
                 location = "komovie://app";
-            } else {
-                location = "http://m.komovie.cn/download";
-            }
         });
 
 	    $(".ActivityDetail").click(function() {
