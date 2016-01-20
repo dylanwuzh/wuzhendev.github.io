@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <script type="text/javascript" src="http://m.komovie.cn/assets/eea112fd/jquery.min.js"></script>
+  <title>测试全景视频</title>
+</head>
+<body>
+
+  <br /> <br />
+  <h1><b>测试全景视频（v1）：</b></h1>
+  <br /> <br /> <br />
+  <a href="javascript:void(0)"  class="Video1">1. 全景视频：skyrim360.mp4 </a>
+  <br /> <br /> <br />
+  <a href="javascript:void(0)"  class="Video2">2. 普通视频：a.flv</a>
+  <br /> <br /> <br />
+  <a href="javascript:void(0)"  class="Video3">3. 直播地址：hlsstream.m3u8</a>
+  <br /> <br /> <br />
+  <br /> <br />
+
+  <script>
+    $(function(){
+        var re=/^.+komovie_.+_[a|i].+$/;
+        var isApp = (navigator.userAgent.match(re) != null);
+
+	    $(".Video1").click(function() {
+            if (isApp) {
+                location = "komovie://app/page?name=PanoramaPlayer&extra1=2";
+            } else {
+                location = "http://m.komovie.cn/download";
+            }
+        });
+
+	    $(".Video2").click(function() {
+            if (isApp) {
+                location = "komovie://app/page?name=PanoramaPlayer&extra1=3";
+            } else {
+                location = "http://m.komovie.cn/download";
+            }
+        });
+
+        $(".Video3").click(function() {
+            if (isApp) {
+                location = "komovie://app/page?name=PanoramaPlayer&extra1=4";
+            } else {
+                location = "http://m.komovie.cn/download";
+            }
+        });
+	});
+  </script>
+
+</body>
+</html>
