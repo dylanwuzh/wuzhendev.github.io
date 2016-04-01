@@ -1,22 +1,22 @@
 # Site settings
-title: Zetsu
-email: zetsu@domain.com
+title: WuZhen
+email: wuzhenxiaoai@gmail.com
 description: Um lindo tema feito para jekyll e com o <3
 baseurl: ""
 url: "http://nandomoreira.me"
 
 author:
-  name     : 'Fernando Moreira'
-  email    : hi@nandomoreira.me
+  name     : 'WuZhen'
+  email    : wuzhenxiaoai@gmail.com
   url      : http://nandomoreira.me
-  facebook : http://facebook.com/fernando.dev
-  twitter  : http://twitter.com/nandomoreirame
+  # facebook : http://facebook.com/fernando.dev
+  # twitter  : http://twitter.com/nandomoreirame
 
-github: https://github.com/nandomoreirame/zetsu
-disqus_shortname: "fernandomoreira"
-google_analytics: UA-52446115-1
+github: https://github.com/wuzhendev
+disqus_shortname: "wuzhen"
+# google_analytics: UA-52446115-1
 
-paginate: 2
+paginate: 10
 comments: true
 paginate_path: "/page/:num"
 
@@ -26,6 +26,6 @@ sass:
 
 # Build settings
 markdown  : kramdown
-permalink : /:title/
+permalink : /:year/:categories/:title.html
 
 gems: [jekyll-paginate]
