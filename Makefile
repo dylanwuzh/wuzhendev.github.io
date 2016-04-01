@@ -3,10 +3,10 @@ deploy:
 	git checkout master
 	git add -A
 	git commit -m "deploy blog"
-	cp -r _site/ /tmp/
+	cp -r _site/ ../site/
 	git checkout gh-pages
-	rm -rf `ls .|grep -v Makefile$`
-	cp -r /tmp/_site/* ./
+	rm -rf `ls .|grep -v Makefile`
+	cp -r ../site/* ./
 	git add -A
 	git commit -m "deploy blog"
 	git push origin gh-pages
