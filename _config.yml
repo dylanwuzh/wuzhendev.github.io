@@ -25,7 +25,22 @@ sass:
   sass_dir: _sass
 
 # Build settings
-markdown  : kramdown
+safe: false
+incremental: true
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  # input: GFM
+  # extensions:
+    # - autolink
+    # - footnotes
+    # - smart
+  # enable_coderay: true
+  syntax_highlighter: rouge
+  # coderay:
+    # coderay_line_numbers:  nil
+
 permalink : /:year/:categories/:title.html
 
 gems: [jekyll-paginate]

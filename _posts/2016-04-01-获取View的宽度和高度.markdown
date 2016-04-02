@@ -10,13 +10,14 @@ comments: true
 ### 实现方法：
 ##### 一、使用 View.measure 测量 View：
 该方法测量的宽度和高度可能与视图绘制完成后的真实的宽度和高度不一致。
-```
+
+{% highlight ruby %}
 int w = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
 int h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
 view.measure(w, h);
 view.getMeasuredWidth(); // 获取宽度
 view.getMeasuredHeight(); // 获取高度
-```
+{% endhighlight %}
 
 ##### 二、使用 ViewTreeObserver. OnPreDrawListener 监听事件：
 在视图将要绘制时调用该监听事件，会被调用多次，因此获取到视图的宽度和高度后要移除该监听事件。
