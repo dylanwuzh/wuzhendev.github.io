@@ -22,12 +22,14 @@ favicon: favicon.png # Image must be in assets/images
 url: http://localhost:4000
 
 ## Gem
-gems:
-  - jekyll-paginate
-  - jekyll-geo-pattern
-  - rouge
-  - kramdown
-  - jekyll-github-metadata
+gems: [jekyll-paginate, jekyll-geo-pattern, rough, kramdown, jekyll-github-metadata]
+
+# gems:
+  # - jekyll-paginate
+  # - jekyll-geo-pattern
+  # - rouge
+  # - kramdown
+  # - jekyll-github-metadata
 
 # Build settings
 markdown: kramdown
