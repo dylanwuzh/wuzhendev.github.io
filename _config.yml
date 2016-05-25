@@ -10,32 +10,31 @@ title: WuZhen # ex. I m Chuan
 name: WuZhen # ex. DONGChuan
 email: wuzhenxiaoai@gmail.com
 location: Beijing, China # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
+# company: MyCompany
+# company_url: my_company_website
 github_url: https://github.com/wuzhendev # ex. https://github.com/DONGChuan
-description: description_of_your_web_site
+description: 吴振
 favicon: favicon.png # Image must be in assets/images
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: http://localhost:4000
+url: http://wuzhendev.github.io
 
-## Gem
-gems: [jekyll-paginate, jekyll-geo-pattern, rough, kramdown, jekyll-github-metadata]
-
-# gems:
-  # - jekyll-paginate
-  # - jekyll-geo-pattern
-  # - rouge
-  # - kramdown
-  # - jekyll-github-metadata
+#Gems
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
+permalink : /:year/:categories/:title.html
 
 source:      .
 destination: ./_site
@@ -46,6 +45,11 @@ defaults: []
 kramdown:
   input: GFM
   enable_coderay: true
+  syntax_highlighter: rouge
+
+sass:
+  style: :compressed
+  sass_dir: _sass
 
 # Disque
 disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
@@ -53,9 +57,14 @@ disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 # encoding
 encoding: utf-8
 
+incremental: true
+
 # Pagination
 paginate: 10
-paginate_path: 'page:num'
+paginate_path: '/page/:num'
+
+# Comments
+comments: true
 
 # Navigation. If you do not like these modules, just remove them :D
 navs:
