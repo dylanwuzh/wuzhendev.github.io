@@ -1,14 +1,19 @@
 ---
 layout: page
-title: About
-permalink: /about/
-slug: about
+title: About Me
+menu: about
+subtitle:   <h3>Download My CV</h3>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-bl"></span> Français
+            </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-gb"></span> English
+            </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-cn"></span> 中文
+            </a>
+                            
+css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
 ---
 
-This is a Jekyll theme. You can find out more information about customizing your theme Jekyll, as well as basic documentation Jekyll use in [jekyllrb.com](http://jekyllrb.com/).
-
-You can find the source code for this theme: [github.com/nandomoreirame/zetsu]({{ site.github }})
-
-You can find the source code in Jekyll [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-Theme developed by: [{{ site.author.name }}]({{ site.author.url }})
+{% include about.html %}

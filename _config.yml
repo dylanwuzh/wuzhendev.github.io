@@ -1,46 +1,91 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: WuZhen
+title: WuZhen # ex. I m Chuan
+name: WuZhen # ex. DONGChuan
 email: wuzhenxiaoai@gmail.com
-description: Um lindo tema feito para jekyll e com o <3
-baseurl: ""
-url: "http://nandomoreira.me"
+location: Beijing, China # ex. Nice, France
+company: MyCompany
+company_url: my_company_website
+github_url: https://github.com/wuzhendev # ex. https://github.com/DONGChuan
+description: description_of_your_web_site
+favicon: favicon.png # Image must be in assets/images
 
-author:
-  name     : 'WuZhen'
-  email    : wuzhenxiaoai@gmail.com
-  url      : http://nandomoreira.me
-  # facebook : http://facebook.com/fernando.dev
-  # twitter  : http://twitter.com/nandomoreirame
+# The base hostname & protocol for your site
+# For local test, please use http://localhost:4000
+# For production, use your github page url. ex. http://dongchuan.github.io
+url: http://localhost:4000
 
-github: https://github.com/wuzhendev
-disqus_shortname: "wuzhen"
-# google_analytics: UA-52446115-1
-
-paginate: 10
-comments: true
-paginate_path: "/page/:num"
-
-sass:
-  style: :compressed
-  sass_dir: _sass
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
 
 # Build settings
-safe: false
-incremental: true
-encoding: utf-8
 markdown: kramdown
 highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
 kramdown:
-  # input: GFM
-  # extensions:
-    # - autolink
-    # - footnotes
-    # - smart
-  # enable_coderay: true
-  syntax_highlighter: rouge
-  # coderay:
-    # coderay_line_numbers:  nil
+  input: GFM
+  enable_coderay: true
 
-permalink : /:year/:categories/:title.html
+# Disque
+disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
-gems: [jekyll-paginate]
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+  -
+    href: /
+    label: Home
+
+  -
+    href: /open-source
+    label: Open-Source
+
+  -
+    href: /blog
+    label: Blog
+
+  -
+    href: /bookmark
+    label: Bookmark
+
+  -
+    href: /about
+    label: About
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'tracking_id'  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
+skill_mobile_app_keywords: [Android, Sketch UI Desgin]

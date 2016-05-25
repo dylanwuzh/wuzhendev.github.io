@@ -1,38 +1,17 @@
-<header class="header">
-
-  <div class="overlay">
-
+<header class="site-header">
     <div class="container">
-
-      <h1 class="title">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a> <small>v2</small>
-      </h1>
-
-      <nav class="navbar">
-        <a href="#" class="menu-icon">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a id="site-header-brand" href="/" title="{{ site.name }}">
+            <span class="octicon octicon-mark-github"></span> {{ site.name }}
         </a>
-
-        <ul class="nav">
-          {% for page in site.pages %}
-            {% if page.title and page.title != 'Home' %}
-            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="{{ site.author.url }}/about" target="_blank">the autor</a></li>
-          <li><a href="{{ site.github }}" target="_blank">Github</a></li>
-        </ul>
-      </nav>
+        <nav class="site-header-nav" role="navigation">
+            {% for nav in site.navs %}
+            <a href="{{ nav.href }}"
+               class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item hvr-underline-from-center"
+               target="{{ nav.target | default: _self }}"
+               title="{{ nav.label }}">
+                {{ nav.label }}
+            </a>
+            {% endfor %}
+        </nav>
     </div>
-
-    {% if page.slug == 'home' %}
-      <h2 class="txt-center">
-        Welcome to <strong>{{ site.title }}</strong>!
-      </h2>
-    {% endif %}
-
-  </div>
-
 </header>
