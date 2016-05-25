@@ -54,7 +54,7 @@ sass:
   sass_dir: _sass
 
 # Disque
-disque: wuzhen.disqus.com # ex. httpdongchuangithubio.disqus.com
+disque: wuzhenroid.disqus.com # ex. httpdongchuangithubio.disqus.com
 
 # encoding
 encoding: utf-8
