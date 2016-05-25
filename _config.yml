@@ -19,7 +19,9 @@ favicon: favicon.png # Image must be in assets/images
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: http://wuzhendev.github.io
+
+# url: http://wuzhendev.github.io
+url: http://localhost:4000
 
 #Gems
 gems:
@@ -52,7 +54,7 @@ sass:
   sass_dir: _sass
 
 # Disque
-disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
+disque: wuzhen.disqus.com # ex. httpdongchuangithubio.disqus.com
 
 # encoding
 encoding: utf-8
