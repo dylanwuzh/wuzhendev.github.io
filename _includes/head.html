@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/{{ site.favicon }}">
@@ -24,6 +24,8 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/header-style.css">
+    <link rel="stylesheet" href="/assets/iconfont/iconfont.css">
 
     <!-- CSS set in page -->
     {% for css in page.css %}
@@ -35,6 +37,22 @@
     <link rel="stylesheet" href="/assets/css/{{css}}">
     {% endfor %}
 
+    <!-- JS set in page -->
+    {% for js in page.js %}
+    <script type="text/javascript" src="/assets/js/{{js}}"></script>
+    {% endfor %}
+
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?6c7aa511bd80bea6d384841a68b1288e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 </head>

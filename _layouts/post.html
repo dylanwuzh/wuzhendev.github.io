@@ -1,6 +1,6 @@
 ---
 layout: default
-css: ['sidebar-post-nav.css']
+css: ['sidebar-post-nav.css', 'post.css']
 ---
 {% include jumbotron.html %}
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
@@ -15,7 +15,7 @@ css: ['sidebar-post-nav.css']
             {% include comments.html %}
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 post-detail-directory">
             {% include sidebar-post-nav.html %}
         </div>
 

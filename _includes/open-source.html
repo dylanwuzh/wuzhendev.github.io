@@ -1,17 +1,11 @@
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 <div id="container-open-source">
-    <section class="jumbotron geopattern" data-pattern-id="{{ page.title }}">
-        <div class="container">
-            <div id="jumbotron-meta-info">
-                <h1>Open Source Projects</h1>
-                <span class="meta-info">
-                    I have <span class="repo-count badge">{{ sorted_repos.size }}</span> projects on Github
-                </span>
-            </div>
-        </div>
-    </section>
 
-    <section class="container">
+    <h3 class="about-title" style="margin-bottom: 8px;">我的开源项目</h3>
+
+    <span style="font-size: 16px; color: #009688; margin-left: 20px;"> {{ sorted_repos.size }} projects on GitHub</span>
+
+    <section class="container" style="margin-top: 20px;">
         <div class="repo-list row">
             <!-- Check here for github metadata -->
             <!-- https://help.github.com/articles/repository-metadata-on-github-pages/ -->

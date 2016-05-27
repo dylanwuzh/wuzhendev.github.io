@@ -1,12 +1,12 @@
 #posts-list {
     list-style-type: none;
-    margin: 20px 0 20px 120px;
-    padding-left: 30px;
-    border-left: 8px solid #4183c4;
+    margin: 20px 0 20px 110px;
+    padding-left: 42px;
+    border-left: 2px solid #4183c4;
 }
 
 #posts-list li {
-    margin: 40px 0;
+    margin: 20px 0;
     position: relative;
 }
 
@@ -15,13 +15,13 @@
 }
 
 .circle {
-    margin-top: -10px;
+    margin-top: -8px;
     top: 50%;
-    left: -44px;
-    width: 20px;
-    height: 20px;
+    left: -50px;
+    width: 14px;
+    height: 14px;
     background: #fff;
-    border: 6px solid #4183c4;
+    border: 2px solid #4183c4;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -30,8 +30,8 @@
 .posts-list-meta {
     margin-top: -10px;
     top: 50%;
-    left: -158px;
-    font-size: 0.95em;
+    left: -138px;
+    font-size: 1em;
     line-height: 20px;
     position: absolute;
 }
@@ -41,7 +41,7 @@
 }
 
 .posts-list-name {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     opacity: 0.8;
 }
@@ -71,6 +71,7 @@
     -webkit-transition-property: transform;
     transition-property: transform;
 }
+
 .bubble-float-left:before {
     position: absolute;
     z-index: -1;
@@ -85,13 +86,48 @@
     -webkit-transition-property: transform;
     transition-property: transform;
 }
+
 .bubble-float-left:hover, .bubble-float-left:focus, .bubble-float-left:active {
     border-color: transparent #4183c4 transparent transparent;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
 }
+
 .bubble-float-left:hover:before, .bubble-float-left:focus:before, .bubble-float-left:active:before {
     border-color: transparent #4183c4 transparent transparent;
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
+}
+
+/*屏幕适配*/
+/*iPhone4、iPhone5*/
+@media screen and (max-device-width: 321px) {
+    /*日期*/
+    .posts-list-meta {
+        left: -110px;
+    }
+    /*圆圈*/
+    .circle {
+        margin-top: -8px;
+        top: 50%;
+        left: -28px;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border: 2px solid #4183c4;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+    }
+    /*文章标题*/
+    .posts-list-name {
+        font-size: 16px;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    #posts-list {
+        list-style-type: none;
+        margin: 20px 0 20px 95px;
+        padding-left: 20px;
+    }
 }

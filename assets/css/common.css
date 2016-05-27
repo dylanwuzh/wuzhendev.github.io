@@ -46,6 +46,14 @@
     line-height: 38px;
 }
 
+#site-header-brand, #site-header-brand .iconfont {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
 .site-header-nav{
     float:right;
     margin-bottom: -20px;
@@ -67,7 +75,6 @@
 .site-header.site-header-nav-scrolled {
     margin: 0;
     background-color: white;
-
     -webkit-box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
     -moz-box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
     -ms-box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
@@ -79,7 +86,7 @@
 /** Jumbotron **/
 .jumbotron {
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     color: #fff;
 }
 
@@ -87,13 +94,15 @@
     color: #fff;
     text-decoration: none;
 }
+
 .jumbotron #jumbotron-meta-info {
-    margin-top: 20px;;
+    margin-top: 16px;
+    line-height: 36px;
 }
 
 .jumbotron .meta-info {
-    font-size: 20px;
-    margin-right: 15px
+    font-size: 18px;
+    margin-right: 20px;
 }
 
 .jumbotron.meta-info, .jumbotron .meta-info .octicon {
@@ -157,4 +166,119 @@
 
 .sidebar-title {
     text-align: center;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: #dbf4f7;
+}
+
+.jumbotron .container {
+    line-height: 120px;
+    height: 120px;
+}
+
+.page-meta-title {
+    color: #b5ffff;
+}
+
+.post .row .markdown-body {
+    padding-top: 20px;
+}
+
+/*屏幕适配*/
+/*iPhone4、iPhone5*/
+@media screen and (max-device-width: 321px) {
+    /*Header*/
+    .jumbotron {
+        padding-top: 60px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .jumbotron .container #jumbotron-meta-info h2 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    /*网站的标题*/
+    #site-header-brand {
+        display: none;
+    }
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.6rem;
+        font-size: 20px;
+    }
+    /*顶部栏*/
+    .site-header {
+        height: 48px;
+        padding-top: 1px;
+        margin: 0;
+    }
+
+    /*首页*/
+    /*首页名称下的介绍信息：地址、github*/
+    .content .jumbotron .container .meta-info {
+        font-size: 12px;
+    }
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 22px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 14px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 16px;
+    }
+
+    /*文章详情页面*/
+    .post-detail-directory {
+        display: none;
+    }
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+    /*.jumbotron {*/
+        /*padding-bottom: 300px;*/
+    /*}*/
+}
+
+@media only screen and (max-device-width :480px){
+
+}
+@media only screen and (min-device-width :481px){ }
+
+/*6*/
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){ }
+
+/*6+*/
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){ }
+
+/*魅族*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){ }
+
+/*mate7*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){ }
+
+/*4 4s*/
+@media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){ }
+
+/*<=340px：导航文字缩小，不显示头像*/
+@media screen and (max-width: 340px) {
+    /*.jumbotron {
+        padding-bottom: 16px;
+    }*/
+}
+@media screen and (max-width: 320px) {
+    /*.jumbotron {
+        padding-bottom: 16px;
+    }*/
 }

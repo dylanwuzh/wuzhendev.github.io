@@ -1,8 +1,8 @@
 ---
-layout: page
-title: All My Blogs
-subtitle: <span class="mega-octicon octicon-clippy"></span>&nbsp;&nbsp; Take notes about everything new
+layout: nav-page
+title: 归档
+subtitle: <span class="octicon octicon-clippy"></span>&nbsp;言之无文，行而不远
 menu: blog
-css: ['blog-page.css']
+css: ['page-blog.css']
 ---
-{% include blog-page.html %}
+{% include page-blog.html %}

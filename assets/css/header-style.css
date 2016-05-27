@@ -1,0 +1,81 @@
+/** For page header **/
+
+/*整个Header*/
+.jumbotron {
+    /*蓝色*/
+    /*background: #2196F3;*/
+    /*青色*/
+    background: #00BCD4;
+    /*蓝绿色*/
+    /*background: #009688;*/
+}
+
+/*Header顶部栏*/
+.site-header {
+    color: #fff;
+    /*蓝色*/
+    /*background: #2196F3;*/
+    /*青色*/
+    background: #00BCD4;
+    /*蓝绿色*/
+    /*background: #009688;*/
+}
+
+/*顶部栏滚动后*/
+.site-header.site-header-nav-scrolled {
+    /*白色*/
+    /*background-color: white;*/
+    /*蓝色*/
+    /*background-color: #1976D2;*/
+    /*青色*/
+    background-color: #0097A7;
+    /*蓝绿色*/
+    /*background-color: #00796B;*/
+}
+
+/*顶部栏头像、名称未滚动到顶时的字体颜色*/
+.site-header #site-header-brand {
+    color: #fff;
+}
+
+/*顶部栏头像、名称滚动到顶时的字体颜色*/
+.site-header.site-header-nav-scrolled #site-header-brand {
+    /*黑色*/
+    /*color: #2e2e2e !important;*/
+    /*白色*/
+    color: #fff !important;
+}
+
+/*顶部栏导航菜单 未滚动到顶部 且 未获取焦点*/
+.site-header .site-header-nav-item {
+    /*color: #9acfea;*/
+    /*青色*/
+    color: #9deaf4;
+}
+
+/*顶部栏导航菜单 未滚动到顶部 且 获取焦点*/
+.site-header a:hover {
+    color: #fff;
+}
+
+/*顶部栏导航菜单 滚动到顶部 且 未获取焦点*/
+.site-header.site-header-nav-scrolled a {
+    /*黑色*/
+    /*color: #2e2e2e;*/
+    /*青色*/
+    color: #9deaf4;
+}
+
+/*顶部栏导航菜单 滚动到顶部 且 获取焦点*/
+.site-header.site-header-nav-scrolled a:hover {
+    /*color: #4183c4;*/
+    /*白色*/
+    color: #fff;
+}
+
+/*顶部栏导航菜单获取焦点时底部动画横线的颜色*/
+.hvr-underline-from-center:before {
+    /*background: #2098d1;*/
+    /*青色*/
+    background: #65dfee;
+}
