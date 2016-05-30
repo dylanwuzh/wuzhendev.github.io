@@ -189,7 +189,7 @@ hr {
 
 /*屏幕适配*/
 /*iPhone4、iPhone5*/
-@media screen and (max-device-width: 376px) {
+@media screen and (max-device-width: 411px) {
     /*Header*/
     .jumbotron {
         padding-top: 60px;
@@ -200,9 +200,15 @@ hr {
         font-size: 22px;
         line-height: 1.2;
     }
-    /*网站的标题*/
+    /*网站的标题图标和文字*/
     #site-header-brand {
         display: none;
+        height: 20px;
+        line-height: 20px;
+    }
+    .site-header-brand-content {
+        height: 20px;
+        line-height: 20px;
     }
     /*导航菜单*/
     .site-header-nav-item {
@@ -245,10 +251,66 @@ hr {
     }
 }
 
-@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
-    /*.jumbotron {*/
-        /*padding-bottom: 300px;*/
-    /*}*/
+@media screen and (max-device-width: 500px) {
+    /*Header*/
+    .jumbotron {
+        padding-top: 60px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .jumbotron .container #jumbotron-meta-info h2 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.6rem;
+        font-size: 20px;
+    }
+    /*顶部栏*/
+    .site-header {
+        height: 48px;
+        padding-top: 1px;
+        margin: 0;
+    }
+
+    /*首页*/
+    /*首页名称下的介绍信息：地址、github*/
+    .content .jumbotron .container .meta-info {
+        font-size: 16px;
+    }
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 22px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 14px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 16px;
+    }
+
+    /*文章详情页面*/
+    .post-detail-directory {
+        display: none;
+    }
+
+    #site-header-brand, #site-header-brand .iconfont {
+        font-size: 20px;
+        line-height: 48px;
+    }
+
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-device-width :480px){

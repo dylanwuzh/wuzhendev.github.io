@@ -32,6 +32,11 @@
     <link rel="stylesheet" href="/assets/css/{{css}}">
     {% endfor %}
 
+    <!-- text/css set in page -->
+    {% for textcss in page.textCssLink %}
+    <link href='{{textcss}}' rel="stylesheet" type='text/css'>
+    {% endfor %}
+
     <!-- CSS set in layout -->
     {% for css in layout.css %}
     <link rel="stylesheet" href="/assets/css/{{css}}">
