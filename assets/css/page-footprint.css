@@ -8,6 +8,20 @@
 	font-family: serif;
 }
 
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-header {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .jumbotron {
+	padding-left: 15px;
+	padding-right: 15px;
     margin-bottom: 0px;
 }

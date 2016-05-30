@@ -1,8 +1,6 @@
 // 读取poem.json文件，并且根据日期取一个填充到页面上
 var readPoems = function() {
 
-    // alert(window.devicePixelRatio);
-
     $.getJSON("../../assets/files/poem.json", function(data) {
 
         var date = new Date().getDate(); //获取当前日期

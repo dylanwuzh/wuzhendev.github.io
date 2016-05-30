@@ -189,7 +189,7 @@ hr {
 
 /*屏幕适配*/
 /*iPhone4、iPhone5*/
-@media screen and (max-device-width: 321px) {
+@media screen and (max-device-width: 376px) {
     /*Header*/
     .jumbotron {
         padding-top: 60px;
@@ -219,7 +219,7 @@ hr {
     /*首页*/
     /*首页名称下的介绍信息：地址、github*/
     .content .jumbotron .container .meta-info {
-        font-size: 12px;
+        font-size: 16px;
     }
     /*首页文章列表item*/
     .post-list-item {
