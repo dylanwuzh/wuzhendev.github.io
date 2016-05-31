@@ -96,7 +96,7 @@
 }
 
 .jumbotron #jumbotron-meta-info {
-    margin-top: 16px;
+    margin-top: 10px;
     line-height: 36px;
 }
 
@@ -141,12 +141,14 @@
 
 .post-list-title a {
     text-decoration: none;
+    line-height: 1.3;
 }
 
 .post-list-description {
     margin-top: 8px;
     margin-bottom: 0;
     font-size: 18px;
+    line-height: 1.4;
     color: #666;
 }
 
@@ -187,101 +189,593 @@ hr {
     padding-top: 20px;
 }
 
+.post .row .markdown-body hr {
+    height: 3px;
+    margin: 16px 0;
+    background-color: #dbf4f7;
+    border: 0 none;
+}
+
+.post-detail-header #jumbotron-meta-info .meta-info {
+    line-height: 60px;
+}
+
+/*文章详情的标题*/
+.post-detail-header .container #jumbotron-meta-info h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.post-detail-header .jumbotron .container {
+    line-height: 120px;
+    height: auto;
+    min-height: 120px;
+    padding-bottom: 8px;
+}
+
+/*诗歌的样式*/
+#poem-daily {
+    text-align: center;
+    text-indent: 0;
+}
+
+.poem-title {
+    font-size: 150%;
+    color: #323232;
+}
+
+.poem-author {
+    color: #323232;
+    margin-left: 100px;
+    line-height: 240%;
+}
+
+.poem-content {
+    color: #323232;
+    line-height: 180%;
+    align-self: center;
+    align-content: center;
+}
+
+
 /*屏幕适配*/
-/*iPhone4、iPhone5*/
-@media screen and (max-device-width: 411px) {
-    /*Header*/
+/*711 ～ 800*/
+@media screen and (min-device-width: 711px) and (max-device-width :801px) {
+    /*h2标题*/
+    h2 {
+        font-size: 34px;
+    }
+    /*h3标题*/
+    h3 {
+        font-size: 30px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 26px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 24px;
+    }
+
+    /*Header底部纯色区域*/
     .jumbotron {
-        padding-top: 60px;
+        padding-top: 100px;
         padding-bottom: 0;
         margin-bottom: 0;
     }
-    .jumbotron .container #jumbotron-meta-info h2 {
-        font-size: 22px;
-        line-height: 1.2;
+
+    /*顶部栏*/
+    .site-header {
+        height: 78px;
+        padding-top: 3px;
+        margin: 0;
     }
-    /*网站的标题图标和文字*/
+    /*网站标题栏*/
     #site-header-brand {
-        display: none;
-        height: 20px;
-        line-height: 20px;
+        line-height: 72px;
     }
-    .site-header-brand-content {
-        height: 20px;
-        line-height: 20px;
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 38px;
+    }
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 34px;
     }
     /*导航菜单*/
     .site-header-nav-item {
         margin-left: 0.6rem;
-        font-size: 20px;
+        font-size: 36px;
     }
-    /*顶部栏*/
-    .site-header {
-        height: 48px;
-        padding-top: 1px;
-        margin: 0;
+
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 150px;
+        height: 150px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 38px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 30px;
+    }
+    /*Header副标题的文字*/
+    .content .jumbotron .container .meta-info {
+        font-size: 28px;
     }
 
     /*首页*/
-    /*首页名称下的介绍信息：地址、github*/
-    .content .jumbotron .container .meta-info {
-        font-size: 16px;
-    }
     /*首页文章列表item*/
     .post-list-item {
-        padding-top: 8px;
-        padding-bottom: 16px;
+        padding-top: 16px;
+        padding-bottom: 24px;
     }
     /*首页文章列表的标题*/
     .post-list-title {
-        font-size: 22px;
+        font-size: 34px;
     }
     /*首页文章列表的日期、tag*/
     .post-list-meta {
-        font-size: 14px;
+        font-size: 24px;
     }
     /*首页文章列表的内容*/
     .post-list-description {
-        font-size: 16px;
+        font-size: 26px;
     }
 
     /*文章详情页面*/
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 32px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 34px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 30px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 24px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
+        font-size: 20px;
+    }
+    /*文章详情的目录*/
     .post-detail-directory {
         display: none;
     }
 }
 
-@media screen and (max-device-width: 500px) {
-    /*Header*/
+/*601 ～ 710*/
+@media screen and (min-device-width: 601px) and (max-device-width :711px) {
+    /*h2标题*/
+    h2 {
+        font-size: 32px;
+    }
+    /*h3标题*/
+    h3 {
+        font-size: 28px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 24px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 22px;
+    }
+
+    /*Header底部纯色区域*/
     .jumbotron {
-        padding-top: 60px;
+        padding-top: 100px;
         padding-bottom: 0;
         margin-bottom: 0;
     }
-    .jumbotron .container #jumbotron-meta-info h2 {
-        font-size: 22px;
-        line-height: 1.2;
+
+    /*顶部栏*/
+    .site-header {
+        height: 72px;
+        padding-top: 2px;
+        margin: 0;
+    }
+    /*网站标题栏*/
+    #site-header-brand {
+        line-height: 70px;
+    }
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 36px;
+    }
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 32px;
     }
     /*导航菜单*/
     .site-header-nav-item {
         margin-left: 0.6rem;
-        font-size: 20px;
+        font-size: 34px;
     }
-    /*顶部栏*/
-    .site-header {
-        height: 48px;
-        padding-top: 1px;
-        margin: 0;
+
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 140px;
+        height: 140px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 36px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 28px;
+    }
+    /*Header副标题的文字*/
+    .content .jumbotron .container .meta-info {
+        font-size: 26px;
     }
 
     /*首页*/
-    /*首页名称下的介绍信息：地址、github*/
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 32px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 22px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 24px;
+    }
+
+    /*文章详情页面*/
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 30px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 32px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 28px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 22px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
+        font-size: 18px;
+    }
+    /*文章详情的目录*/
+    .post-detail-directory {
+        display: none;
+    }
+}
+
+/*539 ～ 601*/
+@media screen and (min-device-width: 539px) and (max-device-width :601px){
+    /*h2标题*/
+    h2 {
+        font-size: 30px;
+    }
+    /*h3标题*/
+    h3 {
+        font-size: 26px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 22px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 20px;
+    }
+
+    /*Header底部纯色区域*/
+    .jumbotron {
+        padding-top: 90px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /*顶部栏*/
+    .site-header {
+        height: 66px;
+        padding-top: 2px;
+        margin: 0;
+    }
+    /*网站标题栏*/
+    #site-header-brand {
+        line-height: 60px;
+    }
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 32px;
+    }
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 28px;
+    }
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.6rem;
+        font-size: 30px;
+    }
+
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 130px;
+        height: 130px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 32px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 24px;
+    }
+    /*Header副标题的文字*/
     .content .jumbotron .container .meta-info {
+        font-size: 22px;
+    }
+
+    /*首页*/
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 28px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 20px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 22px;
+    }
+
+    /*文章详情页面*/
+    /*文章详情页面Header*/
+    .post-detail-header .jumbotron .container {
+        padding-bottom: 0px;
+    }
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 28px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 30px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 26px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 20px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
         font-size: 16px;
     }
+    /*文章详情的目录*/
+    .post-detail-directory {
+        display: none;
+    }
+}
+
+/*461 ～ 539*/
+@media screen and (min-device-width: 461px) and (max-device-width: 539px) {
+    /*h2标题*/
+    h2 {
+        font-size: 28px;
+    }
+    /*h3标题*/
+    h3 {
+        font-size: 24px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 20px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 18px;
+    }
+
+    /*Header底部纯色区域*/
+    .jumbotron {
+        padding-top: 80px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /*顶部栏*/
+    .site-header {
+        height: 60px;
+        padding-top: 3px;
+        margin: 0;
+    }
+    /*网站标题栏*/
+    #site-header-brand {
+        line-height: 48px;
+    }
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 26px;
+    }
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 22px;
+    }
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.6rem;
+        font-size: 24px;
+    }
+
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 120px;
+        height: 120px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 30px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 22px;
+    }
+    /*Header副标题的文字*/
+    .content .jumbotron .container .meta-info {
+        font-size: 20px;
+    }
+
+    /*首页*/
     /*首页文章列表item*/
     .post-list-item {
         padding-top: 8px;
+        padding-bottom: 20px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 24px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 16px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 18px;
+    }
+
+    /*文章详情页面*/
+    /*文章详情页面Header*/
+    .post-detail-header .jumbotron .container {
+        padding-bottom: 0px;
+    }
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 26px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 28px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 24px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 18px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
+        font-size: 16px;
+    }
+    /*文章详情的目录*/
+    .post-detail-directory {
+        display: none;
+    }
+}
+
+/*411 ～ 461*/
+@media screen and (min-device-width: 411px) and (max-device-width: 461px) {
+    /*h2标题*/
+    h2 {
+        font-size: 26px;
+    }
+    /*h3标题*/
+    h3 {
+        font-size: 22px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 18px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 16px;
+    }
+
+    /*Header底部纯色区域*/
+    .jumbotron {
+        padding-top: 70px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /*顶部栏*/
+    .site-header {
+        height: 52px;
+        padding-top: 2px;
+        margin: 0;
+    }
+    /*网站标题栏*/
+    #site-header-brand {
+        line-height: 40px;
+    }
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 24px;
+    }
+    /*网站的标题文字*/
+    #site-header-brand .site-header-sitename {
+        font-size: 20px;
+    }
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.5rem;
+        font-size: 20px;
+    }
+
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 110px;
+        height: 110px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 28px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 20px;
+    }
+    /*Header副标题的文字*/
+    .content .jumbotron .container .meta-info {
+        font-size: 18px;
+    }
+
+    /*首页*/
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 4px;
         padding-bottom: 16px;
     }
     /*首页文章列表的标题*/
@@ -298,49 +792,151 @@ hr {
     }
 
     /*文章详情页面*/
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 24px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 24px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 20px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 16px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
+        font-size: 14px;
+    }
+    /*文章详情的目录*/
     .post-detail-directory {
         display: none;
     }
+    .post-detail-header .jumbotron .container {
+        padding-bottom: 0px;
+    }
+}
 
-    #site-header-brand, #site-header-brand .iconfont {
+/*0 ～ 411*/
+@media screen and (max-device-width: 411px) {
+    /*h2标题*/
+    h2 {
+        font-size: 24px;
+    }
+    /*h3标题*/
+    h3 {
         font-size: 20px;
-        line-height: 48px;
+    }
+    /*h4标题*/
+    h4 {
+        font-size: 16px;
+    }
+    /*p、span标签*/
+    p, span {
+        font-size: 16px;
     }
 
+    /*Header底部纯色区域*/
+    .jumbotron {
+        padding-top: 60px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /*顶部栏*/
+    .site-header {
+        height: 48px;
+        padding-top: 3px;
+        margin: 0;
+    }
+    /*网站标题栏*/
+    #site-header-brand {
+        display: none;
+        line-height: 40px;
+    }
+    /*网站的标题图标*/
+    #site-header-brand .iconfont {
+        font-size: 22px;
+    }
     /*网站的标题文字*/
     #site-header-brand .site-header-sitename {
         font-size: 18px;
     }
-}
+    /*导航菜单*/
+    .site-header-nav-item {
+        margin-left: 0.6rem;
+        font-size: 18px;
+    }
 
-@media only screen and (max-device-width :480px){
+    /*Header标题和副标题的div*/
+    .jumbotron .container {
+        line-height: 100px;
+        height: 100px;
+    }
+    /*Header标题的文字*/
+    .content .jumbotron .container .page-meta-title {
+        font-size: 26px;
+    }
+    /*Header副标题的图标*/
+    .content .jumbotron .container .octicon {
+        font-size: 18px;
+    }
+    /*Header副标题的文字*/
+    .content .jumbotron .container .meta-info {
+        font-size: 16px;
+    }
 
-}
-@media only screen and (min-device-width :481px){ }
+    /*首页*/
+    /*首页文章列表item*/
+    .post-list-item {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    /*首页文章列表的标题*/
+    .post-list-title {
+        font-size: 18px;
+    }
+    /*首页文章列表的日期、tag*/
+    .post-list-meta {
+        font-size: 14px;
+    }
+    /*首页文章列表的内容*/
+    .post-list-description {
+        font-size: 16px;
+    }
 
-/*6*/
-@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){ }
-
-/*6+*/
-@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){ }
-
-/*魅族*/
-@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){ }
-
-/*mate7*/
-@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){ }
-
-/*4 4s*/
-@media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){ }
-
-/*<=340px：导航文字缩小，不显示头像*/
-@media screen and (max-width: 340px) {
-    /*.jumbotron {
-        padding-bottom: 16px;
-    }*/
-}
-@media screen and (max-width: 320px) {
-    /*.jumbotron {
-        padding-bottom: 16px;
-    }*/
+    /*文章详情页面*/
+    /*文章详情的标题*/
+    .post-detail-header .container #jumbotron-meta-info h2 {
+        font-size: 20px;
+    }
+    /*文章详情正文h2标题的大小*/
+    .post .row .markdown-body h2 {
+        font-size: 22px;
+    }
+    /*文章详情正文h3标题的大小*/
+    .post .row .markdown-body h3 {
+        font-size: 18px;
+    }
+    /*文章详情正文的字体大小*/
+    .post .row .markdown-body p {
+        font-size: 16px;
+    }
+    /*文章详情正文的代码文字大小*/
+    .post .row .markdown-body code span {
+        font-size: 12px;
+    }
+    /*文章详情的目录*/
+    .post-detail-directory {
+        display: none;
+    }
+    .post-detail-header .jumbotron .container {
+        min-height: 100px;
+        line-height: 100px;
+        padding-bottom: 0px;
+    }
 }

@@ -2,6 +2,12 @@
     margin-left: 30px;
 }
 
+.about li {
+     margin-top: 6px;
+     word-break : break-all;
+     word-wrap: break-word;
+}
+
 .about p {
     text-indent: 30px;
 }
@@ -15,11 +21,6 @@
     margin-bottom: 16px;
 }
 
-.about .description {
-    font-size: 16px;
-}
-
 .about .contact-li {
-    font-size: 16px;
     margin-top: 6px;
 }
