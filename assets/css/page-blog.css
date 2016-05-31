@@ -41,7 +41,7 @@
 }
 
 .posts-list-name {
-    /*font-size: 20px;*/
+    font-size: 20px;
     text-decoration: none;
     opacity: 0.8;
 }
@@ -99,35 +99,90 @@
     transform: translateX(-20px);
 }
 
+
+
 /*屏幕适配*/
-/*iPhone4、iPhone5*/
-@media screen and (max-device-width: 321px) {
-    /*日期*/
-    .posts-list-meta {
-        left: -110px;
+/*711 ～ 800*/
+@media screen and (min-device-width: 711px) and (max-device-width :801px) {
+    #posts-list {
+        margin: 20px 0 20px 110px;
+        padding-left: 32px;
     }
-    /*圆圈*/
     .circle {
-        margin-top: -8px;
-        top: 50%;
-        left: -28px;
-        width: 14px;
-        height: 14px;
-        background: #fff;
-        border: 2px solid #4183c4;
-        border-radius: 50%;
-        display: block;
-        position: absolute;
+        left: -40px;
     }
-    /*文章标题*/
-    .posts-list-name {
+    .posts-list-meta {
         font-size: 16px;
-        text-decoration: none;
-        opacity: 0.8;
+    }
+    .posts-list-name {
+        font-size: 22px;
+    }
+}
+
+/*601 ～ 710*/
+@media screen and (min-device-width: 601px) and (max-device-width :711px) {
+
+    .posts-list-name {
+        font-size: 14px;
+    }
+}
+
+/*539 ～ 601*/
+@media screen and (min-device-width: 539px) and (max-device-width :601px){
+
+    .posts-list-name {
+        font-size: 14px;
+    }
+}
+
+/*461 ～ 539*/
+@media screen and (min-device-width: 461px) and (max-device-width: 539px) {
+
+    .posts-list-name {
+        font-size: 14px;
+    }
+}
+
+/*411 ～ 461*/
+@media screen and (min-device-width: 411px) and (max-device-width: 461px) {
+    .posts-list-meta {
+        font-size: 10px;
+        left: -100px;
     }
     #posts-list {
-        list-style-type: none;
-        margin: 20px 0 20px 95px;
-        padding-left: 20px;
+        margin: 20px 0 20px 80px;
+        padding-left: 22px;
+    }
+    .circle {
+        left: -28px;
+        margin-top: -5px;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .posts-list-name {
+        font-size: 16px;
+    }
+}
+
+/*0 ～ 411*/
+@media screen and (max-device-width: 411px) {
+    .posts-list-meta {
+        font-size: 10px;
+        left: -100px;
+    }
+    #posts-list {
+        margin: 20px 0 20px 80px;
+        padding-left: 22px;
+    }
+    .circle {
+        left: -28px;
+        margin-top: -5px;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .posts-list-name {
+        font-size: 14px;
     }
 }

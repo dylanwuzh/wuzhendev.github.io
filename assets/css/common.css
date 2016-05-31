@@ -939,4 +939,7 @@ hr {
         line-height: 100px;
         padding-bottom: 0px;
     }
+    .posts-list-name {
+        font-size: 14px;
+    }
 }
