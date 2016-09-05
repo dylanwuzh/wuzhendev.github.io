@@ -15,6 +15,15 @@
 
         {% include open-source.html %}
 
+        <script>
+            audiojs.events.ready(function() {
+                var as = audiojs.createAll();
+            });
+        </script>
+
+        <!-- 歌曲 -->
+        {% include song.html %}
+
         <p id="poem-daily"></p>
 
         <!-- Comments -->

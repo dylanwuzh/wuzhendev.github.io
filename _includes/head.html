@@ -32,6 +32,11 @@
     <link rel="stylesheet" href="/assets/css/{{css}}">
     {% endfor %}
 
+    <!-- absolute CSS set in page -->
+    {% for css in page.cssAbsolute %}
+    <link rel="stylesheet" href="{{css}}">
+    {% endfor %}
+
     <!-- text/css set in page -->
     {% for textcss in page.textCssLink %}
     <link href='{{textcss}}' rel="stylesheet" type='text/css'>
@@ -45,6 +50,11 @@
     <!-- JS set in page -->
     {% for js in page.js %}
     <script type="text/javascript" src="/assets/js/{{js}}"></script>
+    {% endfor %}
+
+    <!-- absolute JS set in page -->
+    {% for js in page.jsAbsolute %}
+    <script type="text/javascript" src="{{js}}"></script>
     {% endfor %}
 
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

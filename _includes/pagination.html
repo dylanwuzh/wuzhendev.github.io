@@ -1,34 +1,44 @@
 <div class="pagination text-align" style="width: 100%; text-align: center;">
-    <div class="btn-group">
+    <div class="paginator-group">
 
-        {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">&laquo;</a>
-        {% else %}
-        <a href="/page{{paginator.previous_page}}" class="btn btn-outline">&laquo;</a>
-        {% endif %}
-        {% else %}
-        <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
-        {% endif %}
+        {% if paginator.total_pages > 1 %}
 
-        {% if paginator.page == 1 %}
-        <a href="javascript:;" class="active btn btn-outline">1</a>
-        {% else %}
-        <a href="/" class="btn btn-outline">1</a>
-        {% endif %}
+            {% if paginator.page > 1 %}
+                {% if paginator.page == 2 %}
+                    <a href="/" class="paginator-nav paginator-prepage"><</a>
+                {% else %}
+                    <a href="/page{{paginator.page|minus:1}}" class="paginator-nav paginator-prepage"><</a>
+                {%endif%}
+            {% endif %}
 
-        {% for count in (2..paginator.total_pages) %}
-        {% if count == paginator.page %}
-        <a href="javascript:;" class="active btn btn-outline">{{count}}</a>
-        {% else %}
-        <a href="/page{{count}}" class="btn btn-outline">{{count}}</a>
-        {% endif %}
-        {% endfor %}
+            {% for count in (1..4) reversed %}
+                {% assign page = {{paginator.page|minus:count}}%}
+                {% if page > 0 %}
+                    {% if page == 1%}
+                        <a href="/" class="paginator-nav paginator-pagenum paginator-online">{{page}}</a>
+                    {% else %}
+                        <a href="/page{{page}}" class="paginator-nav paginator-pagenum paginator-online">{{page}}</a>
+                    {%endif%}
+                {% endif %}
+            {% endfor %}
 
-        {% if paginator.next_page %}
-        <a href="/page{{paginator.next_page}}" class="btn btn-outline">&raquo;</a>
-        {% else %}
-        <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
+            <span class="paginator-nav paginator-pagenum paginator-online">{{paginator.page}}</span>
+
+            {% for count in (1..4) %}
+                {% assign page = {{paginator.page|plus:count}} %}
+                {% if page <= paginator.total_pages %}
+                    {% if page == 1%}
+                        <a href="/" class="paginator-nav paginator-pagenum paginator-online">{{page}}</a>
+                    {% else %}
+                        <a href="/page{{page}}" class="paginator-nav paginator-pagenum paginator-online">{{page}}</a>
+                    {%endif%}
+                {% endif %}
+            {% endfor %}
+
+            {% if paginator.page < {{paginator.total_pages}} %}
+                <a href="/page{{paginator.page|plus:1}}" class="paginator-nav paginator-nextpage">></a>
+            {% endif %}
+
         {% endif %}
 
     </div>

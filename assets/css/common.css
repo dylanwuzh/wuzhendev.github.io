@@ -117,6 +117,7 @@
     font-size:12px;
     line-height:1.5;
     color:#777;
+    z-index: -1;
     border-top:2px solid #eee
 }
 
@@ -214,6 +215,10 @@ hr {
     padding-bottom: 8px;
 }
 
+.post-directory-module {
+    overflow-y: visible;
+}
+
 /*诗歌的样式*/
 #poem-daily {
     text-align: center;
@@ -238,8 +243,99 @@ hr {
     align-content: center;
 }
 
+.paginator-group {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.paginator-nav {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.paginator-pagenum {
+    font-size: 16px;
+}
+
+.paginator-outline {
+    color: #323232;
+}
+
+.paginator-prepage {
+    text-decoration: none;
+    color: #00BCD4;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.paginator-prepage:link {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.paginator-prepage:visited {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.paginator-prepage:hover {
+    text-decoration: none;
+    color: #0097A7;
+}
+
+.paginator-prepage:active {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.paginator-nextpage {
+    text-decoration: none;
+    color: #00BCD4;
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.paginator-nextpage:link {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.paginator-nextpage:visited {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.paginator-nextpage:hover {
+    text-decoration: none;
+    color: #0097A7;
+}
+
+.paginator-nextpage:active {
+    text-decoration: none;
+    color: #00BCD4;
+}
+
+.post-detail-directory {
+    z-index: 9000;
+}
+
 
 /*屏幕适配*/
+/*页面可见区域宽度小于1000 ～ */
+@media screen and (max-width: 1000px) {
+    /*文章详情的目录*/
+    .post-detail-directory {
+        display: none;
+    }
+}
+
+/*801 ～ */
+@media screen and (min-device-width: 801px) {
+    .about p, .about span {
+        font-size: 1.2em;
+    }
+}
+
 /*711 ～ 800*/
 @media screen and (min-device-width: 711px) and (max-device-width :801px) {
     /*h2标题*/
