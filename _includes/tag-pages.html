@@ -1,0 +1,76 @@
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+    var tag = getQueryString("tag");
+    var posts = jQuery.parseJSON($("#posts").text());
+    var content = "";
+    $.each(posts, function(key, item) {
+
+        if (jQuery.inArray(tag, item.tags) > 0) {
+
+            alert(jQuery.inArray(tag, item.tags));
+
+            content += '<li class="post-list-item">';
+            content += '<h2 class="post-list-title">';
+            content += '<a class="hvr-underline-from-center" href="' + item.url + '">' + item.title + '</a>';
+            content += '</h2>';
+            content += '<p class="post-list-meta">';
+            content += '<span class="octicon octicon-calendar"></span> ' + item.date;
+            content += '<p class="post-list-description">';
+            content += item.excerpt;
+            content += '</p>';
+            content += "</li>";
+        }
+    });
+
+    // alert(tag);
+    // alert(content);
+
+    $("#page-title").text(tag);
+    $("#tag-post-list").html(content);
+
+});
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+</script>
+
+<p id="posts" style="display: none;">
+[{% for post in site.posts %}
+{"title":"{{post.title}}",
+"excerpt":"{{ post.excerpt | strip_html | strip }}",
+"url":"{{site.url}}{{post.url}}",
+"date":"{{ post.date | date:'%Y/%m/%d' }}",
+"tags":[{% for tag in post.tags %}"{{tag}}"{% if forloop.last == false %},{% endif %}{% endfor %}]}
+{% if forloop.last == false %},{% endif %}{% endfor %}]
+</p>
+
+<section class="jumbotron">
+    <div class="container">
+        <h2 class="page-meta-title">{{ page.title }}</h2>
+        <div id="jumbotron-meta-info">
+            <span class="meta-info" id="page-title" style="font-size: 40px;">
+            </span>
+        </div>
+    </div>
+</section>
+
+<section class="content container">
+
+    <div class="row">
+
+        <!-- Post List -->
+        <div class="col-md-8">
+
+            <ol class="post-list" id="tag-post-list">
+
+            </ol>
+
+        </div>
+    </div>
+
+</section>

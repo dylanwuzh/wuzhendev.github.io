@@ -3,7 +3,7 @@
     <ul class="list-group">
         {% for tag in site.tags %}
         <li class="list-group-item">
-            {{ tag | first }}
+            <a href="{{ site.baseurl }}/tags?tag={{ tag[0] }}">{{ tag[0] }}</a>
             <span class="badge">{{ tag[1].size }}</span>
         </li>
         {% endfor %}
