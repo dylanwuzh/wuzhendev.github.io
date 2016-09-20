@@ -4,13 +4,12 @@ title:  "Android使用Gradle发布项目到JCenter"
 categories: Android
 tags: [Android, Gradle, JCenter]
 ---
-开发环境：
 
-
+**开发环境：**
 
 > *IDE：*
 > **Android Studio 2.0**
-
+>
 > *dependencies：*
 > **com.android.tools.build:gradle:2.0.0**
 > **com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0**
