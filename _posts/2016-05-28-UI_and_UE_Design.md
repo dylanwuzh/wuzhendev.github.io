@@ -2,7 +2,7 @@
 layout: post
 title:  "UI、UE设计资料收集"
 categories: Design
-tags: [UI, UE, Design]
+tags: [Design]
 ---
 ## UI、UE设计
 

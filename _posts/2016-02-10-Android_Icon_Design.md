@@ -2,7 +2,7 @@
 layout: post
 title:  "Android的ICON设计规范"
 categories: Android
-tags: [Android, UI Design]
+tags: [Android, Design]
 ---
 应用的图标应当是一个 Alpha 通道透明的32位 PNG 图片，根据不同的 DPI 设计几种不同大小，具体规则如下表：
 

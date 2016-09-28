@@ -2,7 +2,7 @@
 layout: post
 title:  "开源项目收集"
 categories: 开源
-tags: [Android, iOS, 开源]
+tags: [Android, iOS, 开源项目]
 ---
 ## Android开源项目
 

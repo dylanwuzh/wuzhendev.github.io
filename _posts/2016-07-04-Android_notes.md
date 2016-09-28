@@ -2,7 +2,7 @@
 layout: post
 title:  "Android笔记"
 categories: Android
-tags: [Android, 笔记]
+tags: [Android]
 ---
 ## 判断 Activity 是否为 Task 的根
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "透明度百分比的十六进制对应表"
 categories: Design
-tags: [UI Design]
+tags: [Design]
 ---
 ## 透明度百分比的十六进制对应表：
 

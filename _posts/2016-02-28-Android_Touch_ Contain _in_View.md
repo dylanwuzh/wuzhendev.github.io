@@ -2,7 +2,7 @@
 layout: post
 title:  "Android判断触摸事件是否在View内"
 categories: Android
-tags: [Android, View]
+tags: [Android]
 ---
 在应用中有时需要判断触摸事件的位置是否在某个 View 内，可以按照如下方法判断：
 

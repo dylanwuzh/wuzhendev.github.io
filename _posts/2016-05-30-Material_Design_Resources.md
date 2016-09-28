@@ -2,7 +2,7 @@
 layout: post
 title:  "Material Design资料收集"
 categories: Material Design
-tags: [Android, Material Design, 资料]
+tags: [Android, Design, 资料]
 ---
 ## Material Design资料
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "CentOS使用vsftpd开启FTP服务"
 categories: CentOS
-tags: [CentOS, FTP]
+tags: [CentOS]
 ---
 ## 1. 安装 vsftpd
 

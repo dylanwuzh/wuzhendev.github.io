@@ -2,7 +2,7 @@
 layout: post
 title:  "自定义输入支付密码的软键盘"
 categories: Android
-tags: [Android, View]
+tags: [Android]
 ---
 > **需求：要实现类似支付宝的输入支付密码的功能，效果图如下：**
 > ![软键盘效果图](/assets/images/posts/2016-07-30-keyboard_design.jpg)

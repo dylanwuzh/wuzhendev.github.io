@@ -2,7 +2,7 @@
 layout: post
 title:  "Android获取View的宽度和高度"
 categories: Android
-tags: [Android, View]
+tags: [Android]
 ---
 有时需要在 onCreate() 方法中获取某个 View 组件的宽度和高度，而直接调用 getWidth()、getHeight()、getMeasuredWidth()、getMeasuredHeight() 方法只会得到 0。
 

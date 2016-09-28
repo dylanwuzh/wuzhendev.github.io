@@ -2,7 +2,7 @@
 layout: post
 title:  "Android ListView的setSelection方法无效"
 categories: Android
-tags: [Android, View, ListView]
+tags: [Android]
 ---
 > 需求：聊天消息列表页面，收到新消息后自动滚动到 ListView 的底部
 

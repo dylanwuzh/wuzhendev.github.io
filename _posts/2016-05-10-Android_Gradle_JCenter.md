@@ -2,7 +2,7 @@
 layout: post
 title:  "Android使用Gradle发布项目到JCenter"
 categories: Android
-tags: [Android, Gradle, JCenter]
+tags: [Android, JCenter]
 ---
 
 **开发环境：**
