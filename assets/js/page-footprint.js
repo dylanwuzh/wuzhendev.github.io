@@ -72,17 +72,17 @@ function addMapControllers(map) {
 function addFootprintLines(map) {
 
 	// 线条的颜色
-	var lineColors = ["#00BCD4", "#FF9800", "#4CAF50", "#607D8B", "#448AFF",
-		"#FF5722"
+	var lineColors = ["#FF5252", "#FF9800", "#009688", "#2196F3", "#03A9F4",
+		"#CDDC39", "#512DA8", "#E040FB"
 	];
 
 	// 旅行的时间
 	var tripTimes = ["2014-09 中秋节", "2014-11", "2015-06 端午节", "2015-08",
-		"2015-10 十一", "2016-05 五一"
+		"2015-10 十一", "2016-05 五一", "2016-06 端午节", "2016-10 十一"
 	];
 	var tripInfos = [
 		"和同学一行三人从峨眉山山脚一直爬到山顶，期待中的佛光、晚霞、日出都没看到，不过云海确实很壮观。在金顶脚下的时候还是一片雾蒙蒙的，等坐着缆车登上金顶，顿时拨云见日，万里晴空。",
-		"", "", "", "", ""
+		"", "", "", "", "", "", ""
 	];
 
 	var markTitles = new Array();
@@ -92,6 +92,8 @@ function addFootprintLines(map) {
 	markTitles[3] = ["北京", "南京"];
 	markTitles[4] = ["北京", "成都", "九寨沟", "乐山", "都江堰"];
 	markTitles[5] = ["北京", "扬州", "苏州", "上海"];
+	markTitles[6] = ["北京", "昆明", "大理", "丽江"];
+	markTitles[7] = ["北京", "张家界", "长沙", "武汉"];
 
 	var markInfos = new Array();
 	markInfos[0] = ["2014-09-05 20:20从北京，23:10到达成都", "成都", "峨眉山"];
@@ -100,6 +102,8 @@ function addFootprintLines(map) {
 	markInfos[3] = ["北京", "南京"];
 	markInfos[4] = ["北京", "成都", "九寨沟", "乐山", "都江堰"];
 	markInfos[5] = ["北京", "扬州", "苏州", "上海"];
+	markInfos[6] = ["北京", "昆明", "大理", "丽江"];
+	markInfos[7] = ["北京", "张家界", "长沙", "武汉"];
 
 	// 2014-09：北京 -> 成都 -> 峨眉山
 	var beijing1 = new BMap.Point(116.583404, 39.914874); // 北京
@@ -146,6 +150,22 @@ function addFootprintLines(map) {
 	var shanghai6 = new BMap.Point(121.497698, 31.241895); // 上海
 	addFootprints(map, lineColors[5], [beijing6, yangzhou6, suzhou6, shanghai6],
 		tripTimes[5], tripInfos[5], markTitles[5], markInfos[5]);
+
+	// 2016-06：北京 -- 昆明 -- 大理 -- 丽江
+	var beijing7 = new BMap.Point(116.381938, 39.873136); // 北京
+	var kunming = new BMap.Point(102.93946,25.104806); // 昆明
+	var dali = new BMap.Point(100.170377,25.69349); // 大理
+	var lijiang = new BMap.Point(100.240502,26.881185); // 丽江
+	addFootprints(map, lineColors[6], [beijing7, kunming, dali, lijiang],
+		tripTimes[6], tripInfos[6], markTitles[6], markInfos[6]);
+
+	// 2016-10：北京 -- 张家界 -- 长沙 -- 武汉
+	var beijing8 = new BMap.Point(116.381938, 39.873136); // 北京
+	var zhangjiajie = new BMap.Point(110.460347,29.337818); // 张家界
+	var changsha = new BMap.Point(112.943896,28.194246); // 长沙
+	var wuhan = new BMap.Point(114.299327,30.553406); // 武汉
+	addFootprints(map, lineColors[7], [beijing8, zhangjiajie, changsha, wuhan],
+		tripTimes[7], tripInfos[7], markTitles[7], markInfos[7]);
 }
 
 // 添加每一条足迹
@@ -169,7 +189,9 @@ function addMarkPoints(map, points, markTitles, markInfos) {
 	for (var i = 0; i < points.length; i++) {
 		var point = points[i];
 		var icon = new BMap.Icon("/assets/images/marker" + (i + 1) + ".png", new BMap
-			.Size(30, 60));
+			.Size(30, 30));
+		// var icon = new BMap.Icon("/assets/images/marker.png", new BMap
+		// 	.Size(5, 5));
 
 		var marker = new BMap.Marker(point, {
 			icon: icon
